@@ -44,50 +44,51 @@ class Game:
         if (self.player_one_sets==self.player_two_sets and self.player_one_sets > self.secondVictorySet): 
             result = "Deuce"
         
-        P1res = ""
-        P2res = ""
+        player_one_pont = ""
+        player_two_pont = ""
+        
         if (self.player_one_sets > zeroVictorySet and self.player_two_sets == zeroVictorySet):
             if (self.player_one_sets == oneVictorySet):
-                P1res = "Fifteen"
+                player_one_pont = "Fifteen"
             if (self.player_one_sets == twoVictorySet):
-                P1res = "Thirty"
+                player_one_pont = "Thirty"
             if (self.player_one_sets == thirdVictorySet):
-                P1res = "Forty"
+                player_one_pont = "Forty"
             
-            P2res = "Love"
-            result = P1res + "-" + P2res
+            player_two_pont = "Love"
+            result = player_one_pont + "-" + player_two_pont
         if (self.player_two_sets > zeroVictorySet and self.player_one_sets == zeroVictorySet):
             if (self.player_two_sets == oneVictorySet):
-                P2res = "Fifteen"
+                player_two_pont = "Fifteen"
             if (self.player_two_sets == twoVictorySet):
-                P2res = "Thirty"
+                player_two_pont = "Thirty"
             if (self.player_two_sets == thirdVictorySet):
-                P2res = "Forty"
+                player_two_pont = "Forty"
             
-            P1res = "Love"
-            result = P1res + "-" + P2res
+            player_one_pont = "Love"
+            result = player_one_pont + "-" + player_two_pont
         
         
         if (self.player_one_sets > self.player_two_sets and self.player_one_sets < lastVictorySet):
             if (self.player_one_sets == twoVictorySet):
-                P1res="Thirty"
+                player_one_pont="Thirty"
             if (self.player_one_sets == thirdVictorySet):
-                P1res="Forty"
+                player_one_pont="Forty"
             if (self.player_two_sets== oneVictorySet):
-                P2res="Fifteen"
+                player_two_pont="Fifteen"
             if (self.player_two_sets== twoVictorySet):
-                P2res="Thirty"
-            result = P1res + "-" + P2res
+                player_two_pont="Thirty"
+            result = player_one_pont + "-" + player_two_pont
         if (self.player_two_sets > self.player_one_sets and self.player_two_sets < lastVictorySet):
             if (self.p2Set == twoVictorySet):
-                P2res="Thirty"
+                player_two_pont="Thirty"
             if (self.player_two_sets == thirdVictorySet):
-                P2res="Forty"
+                player_two_pont="Forty"
             if (self.player_one_sets == oneVictorySet):
-                P1res="Fifteen"
+                player_one_pont="Fifteen"
             if (self.player_one_sets == twoVictorySet):
-                P1res="Thirty"
-            result = P1res + "-" + P2res
+                player_one_pont="Thirty"
+            result = player_one_pont + "-" + player_two_pont
         
         if (self.player_one_sets > self.player_two_sets and self.player_two_sets >= thirdVictorySet):
             result = "Advantage " + self.player1Name
