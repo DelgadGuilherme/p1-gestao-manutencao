@@ -5,13 +5,27 @@ class Game:
         self.player2Name = player2Name
         self.p1Sets = 0
         self.p2Sets = 0
+
+    def SetP1Sets(self, number):
+        for i in range(number):
+            self.P1Sets()
+    
+    def SetP2Sets(self, number):
+        for i in range(number):
+            self.P2Sets()
+    
+    def P1Sets(self):
+        self.p1Sets +=1
+    
+    def P2Sets(self):
+        self.p2Sets +=1
         
     def won_point(self, playerName):
         if playerName == self.player1Name:
             self.P1Sets()
         else:
             self.P2Sets()
-    
+
     def score(self):
         result = ""
         if (self.p1Sets == self.p2Sets and self.p1Sets < 3):
@@ -82,17 +96,3 @@ class Game:
             result = "Win for " + self.player2Name
         return result
     
-    def SetP1Sets(self, number):
-        for i in range(number):
-            self.P1Sets()
-    
-    def SetP2Sets(self, number):
-        for i in range(number):
-            self.P2Sets()
-    
-    def P1Sets(self):
-        self.p1Sets +=1
-    
-    
-    def P2Sets(self):
-        self.p2Sets +=1
